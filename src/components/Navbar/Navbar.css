@@ -1,8 +1,8 @@
-.boton{
+/* .boton{
     color: blue;
-}
+} */
 
 .navbar{
-    display:flex;
+    display:block;
     justify-content:center;
 }
