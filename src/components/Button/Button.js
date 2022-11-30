@@ -1,6 +1,6 @@
 const Button = (props) =>{
     return (
-        <button onClick={props.click} className='boton' style = {{color:props.colorText}}>
+        <button className='boton' onClick={props.click} style = {{color:props.colorText}}>
             {props.children}
         </button>
     )
