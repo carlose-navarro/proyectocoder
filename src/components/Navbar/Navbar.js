@@ -1,9 +1,10 @@
 import './Navbar.css'
 import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom' 
 
 const handleOnClick = () =>{
-    alert('Hice Click en Productos')
+    alert('Productos')
 }
 
 const handleOnClick2 = () =>{
@@ -17,13 +18,32 @@ const Navbar = (props) => {
             <img src={'./image/logonaga.svg'} width='200' />
             <h1 style={{ color: props.colorTitle}}>Tienda Deportiva</h1>
             <Button colorText='black' click={handleOnClick}>
-                Productos
+                <Link to='/'>
+                    Inicio
+                </Link>
             </Button>
+
+            <Button colorText='black'>
+                <Link to='/category/mujer'>
+                    Mujer
+                </Link>
+            </Button>
+
+            <Button colorText='black'>
+                <Link to='/category/hombre'>
+                    Hombre
+                </Link>
+            </Button>
+
             <Button colorText='black' click={handleOnClick2}>
-                Contactanos
+                <Link>
+                    Contactanos
+                </Link>
             </Button>
             <Button colorText='black'>
-                Ingresar
+                <Link>
+                    Ingresar
+                </Link>
             </Button>
             <CartWidget />
         </nav>

@@ -26,7 +26,7 @@ const Counter = ({initial, stock, onAdd}) =>{
             <Button click={reset}>Limpiar</Button>
             <Button click={decrement}>-</Button>
             <Button click={increment}>+</Button>
-            <Button click={() =>onAdd(count)}>Añadir</Button>
+            <Button click={() =>onAdd(count)} >Añadir al carrito</Button>
         </div>
     )
 }

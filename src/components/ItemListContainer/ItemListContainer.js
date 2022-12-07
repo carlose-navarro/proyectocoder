@@ -1,17 +1,41 @@
-import Counter from "../Counter/Counter"
+import { useEffect, useState } from "react"
+import ItemList from "../ItemList/ItemList"
+import { getProducts, getProductsByCategory} from '../asyncMock'
+import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({greeting}) =>{
 
-    const handleOnAdd = (quantity) => {
-        if (quantity > 0){
-            console.log('Se agregaron ' + quantity)
+    const[products, setProducts] = useState([])
+
+    const{categoryId} = useParams()
+
+    useEffect(() => {
+
+        if(categoryId){
+            getProductsByCategory(categoryId)
+            .then(response=>{
+                setProducts(response)
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+        }else{
+            getProducts()
+            .then(response => {
+                setProducts(response)
+            })
+            .catch(error =>{
+                console.log(error)
+            })
         }
-    }
+    }, [categoryId])
+
+
 
     return(
         <div>
             <h1>{greeting}</h1>
-            <Counter initial={0} stock={10} onAdd={handleOnAdd}></Counter>
+            <ItemList products={products} />  
         </div>
         
     )
