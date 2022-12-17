@@ -15,7 +15,7 @@ const products = [
         description:'Remera de Argentina - Mujer',
         price: '10.000$',
         stock: '10',
-        pictureUrl: 'https://gauchofood.com/wp-content/uploads/2022/09/Camiseta-titular-Argentina-22-Mujer-1.webp'
+        pictureUrl: 'https://www.argentinamall.com/images/AMDE012001_L.jpg'
     },
     {
         id: '3',
@@ -54,7 +54,7 @@ const products = [
         pictureUrl: 'https://sporting.vtexassets.com/arquivos/ids/558996/6HB9215-000-1.jpg?v=637929014321800000'
     },
     {
-        id: '6',
+        id: '7',
         category: 'hombre',
         title: 'Buzo',
         description:'Buzo para Hombre',

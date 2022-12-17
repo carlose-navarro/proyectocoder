@@ -1,8 +1,9 @@
 import Item from "../Item/Item";
+import './ItemList.css';
 
 const ItemList =({products}) =>{
     return(
-        <div style={{display: 'flex'}}>
+        <div >
         {
             products.map(product => <Item key={product.id} product={product}/>)
         }

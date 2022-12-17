@@ -11,41 +11,46 @@ const handleOnClick2 = () =>{
     alert('Hice Click en Contactanos')
 }
 
-
 const Navbar = (props) => {
     return(
         <nav className='navbar'>
-            <img src={'./image/logonaga.svg'} width='200' />
-            <h1 style={{ color: props.colorTitle}}>Tienda Deportiva</h1>
-            <Button colorText='black' click={handleOnClick}>
+            <img className='logoImg' src={'./image/nagaSport.png'} id="titulo"/>
+            <h1 className='logoName' >Tienda Deportiva</h1>
+            <div >
                 <Link to='/'>
-                    Inicio
+                    <Button click={handleOnClick}>
+                            Inicio
+                    </Button>
                 </Link>
-            </Button>
-
-            <Button colorText='black'>
+                
                 <Link to='/category/mujer'>
-                    Mujer
+                    <Button >
+                        Mujer
+                    </Button>
                 </Link>
-            </Button>
 
-            <Button colorText='black'>
                 <Link to='/category/hombre'>
-                    Hombre
+                    <Button >
+                        Hombre
+                    </Button>
                 </Link>
-            </Button>
 
-            <Button colorText='black' click={handleOnClick2}>
                 <Link>
-                    Contactanos
+                    <Button click={handleOnClick2}>
+                        Contactanos
+                    </Button>
                 </Link>
-            </Button>
-            <Button colorText='black'>
+
                 <Link>
-                    Ingresar
+                    <Button >
+                        Ingresar
+                    </Button>
                 </Link>
-            </Button>
-            <CartWidget />
+
+                <Link to='/Cart'>
+                    <CartWidget />
+                </Link>
+            </div>
         </nav>
     )
 }

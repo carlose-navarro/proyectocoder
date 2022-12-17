@@ -1,4 +1,21 @@
 .navbar{
-    display:block;
-    justify-content:center;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.logoImg{
+    height: 150px;
+    display:flex;
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.logoName{
+    display:flex;
+    color: white;
+
 }
