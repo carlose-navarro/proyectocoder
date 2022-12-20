@@ -4,7 +4,7 @@ const products = [
         category: 'mujer',
         title: 'Calza',
         description:'Calza para Mujer',
-        price: '10.000$',
+        price: '10000',
         stock: '0',
         pictureUrl: 'https://d3ugyf2ht6aenh.cloudfront.net/stores/144/702/products/calza-fit-verde-21-82c4babf5644aa468615791001659761-1024-1024.jpg'
     },
@@ -13,7 +13,7 @@ const products = [
         category: 'mujer',
         title: 'Remera',
         description:'Remera de Argentina - Mujer',
-        price: '10.000$',
+        price: '10000',
         stock: '10',
         pictureUrl: 'https://www.argentinamall.com/images/AMDE012001_L.jpg'
     },
@@ -22,7 +22,7 @@ const products = [
         category: 'mujer',
         title: 'Buzo',
         description:'Buzo para Mujer',
-        price: '10.000$',
+        price: '10000',
         stock: '10',
         pictureUrl: 'https://www.newbalance.com.ar/media/catalog/product/b/u/buzo-medio-cierre-new-balance-mujer-running-impact-half-zip-wt71213bes_nb_40_i.jpg'
     },
@@ -31,7 +31,7 @@ const products = [
         category: 'mujer',
         title: 'Musculosa',
         description:'Musculosa para Mujer',
-        price: '10.000$',
+        price: '10000',
         stock: '10',
         pictureUrl: 'https://borabikes.com.ar/63774-large_default/remera-musculosa-deportiva-mujer-fox-flex-air-drytech-bora.jpg'
     },
@@ -40,7 +40,7 @@ const products = [
         category: 'hombre',
         title: 'Calza',
         description:'Calza para hombre ',
-        price: '10.000$',
+        price: '10000',
         stock: '2',
         pictureUrl: 'https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/c/a/calza-hombre-new-balance-challenge-3-4-tight-mp73029bk.jpg'
     },
@@ -49,7 +49,7 @@ const products = [
         category: 'hombre',
         title: 'Remera',
         description:'Remera de Argentina - Hombre',
-        price: '10.000$',
+        price: '10000',
         stock: '2',
         pictureUrl: 'https://sporting.vtexassets.com/arquivos/ids/558996/6HB9215-000-1.jpg?v=637929014321800000'
     },
@@ -58,7 +58,7 @@ const products = [
         category: 'hombre',
         title: 'Buzo',
         description:'Buzo para Hombre',
-        price: '10.000$',
+        price: '10000',
         stock: '2',
         pictureUrl: 'https://www.newbalance.com.ar/media/catalog/product/cache/4/thumbnail/9df78eab33525d08d6e5fb8d27136e95/m/t/mt53030aoh_nb_40_i.jpg'
     }

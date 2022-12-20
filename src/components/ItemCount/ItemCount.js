@@ -2,7 +2,7 @@ import Button from "../Button/Button"
 import {useState} from 'react'
 
 
-const Counter = ({initial, stock, onAdd}) =>{
+const ItemCount = ({initial, stock, onAdd}) =>{
 
     const [count, setCount] = useState(initial)
 
@@ -26,9 +26,9 @@ const Counter = ({initial, stock, onAdd}) =>{
             <Button click={reset}>Limpiar</Button>
             <Button click={decrement}>-</Button>
             <Button click={increment}>+</Button>
-            <Button click={() =>onAdd(count)} >Añadir al carrito</Button>
+            <Button click={() =>onAdd(count)} count={count}>Añadir al carrito</Button>
         </div>
     )
 }
 
-export default Counter
+export default ItemCount

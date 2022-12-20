@@ -1,11 +1,18 @@
 import Button from "../Button/Button"
+import { CartContext } from "../../context/CartContext"
+import { useContext } from "react"
 
 const CartWidget = () =>{
+    const {getQuantity} = useContext(CartContext)
+
+    const totalQuantity = getQuantity()
 
     return (
         <Button colorText='black'>
-            <img src={'./image/cart_shop_icon.svg'} width='14'/>
-            5
+            <div>
+                <img src={'./image/cart_icon.svg'} alt='carrito' width='14'/>
+                { totalQuantity }
+            </div>
         </Button>
     )
 }
