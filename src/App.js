@@ -6,7 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Footer from './components/Footer/Footer';
-
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
 
@@ -20,6 +20,7 @@ function App() {
             <Route path='/category/:categoryId' element={<ItemListContainer greeting='Listado de Productos'/>}/>
             <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
             <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

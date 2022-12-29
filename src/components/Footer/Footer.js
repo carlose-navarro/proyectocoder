@@ -8,7 +8,7 @@ const Footer = () => {
                 <a>|</a>
                 <a href="mailto=contactanos@gmail.com">contactanos</a>
             </section>
-            <p>Copyright 2022</p>
+            <p>Copyright 2022 | Proyecto CoderHouse</p>
         </footer>
     )
 }

@@ -10,7 +10,7 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) =>{
     const {addItem, isInCart} = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
-        addItem({id, title, price, quantity})
+        addItem({id, title, price, quantity, pictureUrl})
         /* setQuantity(quantity) */
     }
 
@@ -22,9 +22,14 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) =>{
         <h2>$ {price}</h2>
         {   isInCart(id)
             /* quantity > 0 */
-            ?   <Link to='/Cart'>
-                    <Button>Terminar Compra</Button>
-                </Link>
+            ?   <div>
+                    <Link to='/'>
+                        <Button>Seguir comprando</Button>
+                    </Link>
+                    <Link to='/Cart'>
+                        <Button>Ir al carrito</Button>
+                    </Link>
+                </div>
             : stock > 0 
                 ? <ItemCount initial={0} stock={stock} onAdd={handleOnAdd}></ItemCount>
                 : <h1>No hay stock</h1>

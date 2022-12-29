@@ -1,0 +1,39 @@
+.form_container_cart{
+    max-width: 700px;
+    height: auto;
+    background-color: #8ec540;
+    margin: 5% auto;
+    padding-bottom: 1rem;
+
+
+    
+}
+
+.form_vist_prod{
+    background-color: #ffffff;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.8);
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    height: 150px;
+    width: 400px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.form_top_prod{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-top: solid .4rem #000000;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 15px;
+}
