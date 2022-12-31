@@ -1,3 +1,29 @@
+# NAGASTORE
+## _Proyecto CODERHOUSE_
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+¡Desarrollo de SPA para la compra online de vestimenta deportiva!
+Haz tus compras en línea de manera sencilla con nuestra aplicación!
+Usamos React y Firebase para ofrecer un mejor rendimiento y seguridad.
+Se puede ver nuestro catálogo de productos organizado por categorías y filtra por tus preferencias.
+Agregar productos al carro de compras y crea tu orden de compra.
+¡Prueba nuestra aplicación de tienda en línea hoy mismo!.
+
+## Instalación
+
+```sh
+git clone https://github.com/carlose-navarro/proyectocoder.git
+cd proyectocoder
+npm install
+npm start
+```
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
