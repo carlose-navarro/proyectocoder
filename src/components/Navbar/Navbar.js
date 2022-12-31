@@ -3,13 +3,9 @@ import Button from '../Button/Button'
 import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom' 
 
-const handleOnClick = () =>{
-    alert('Productos')
-}
-
-const handleOnClick2 = () =>{
+/* const handleOnClick2 = () =>{
     alert('Hice Click en Contactanos')
-}
+} */
 
 const Navbar = (props) => {
     return(
@@ -18,7 +14,7 @@ const Navbar = (props) => {
             <h1 className='logoName' >Tienda Deportiva</h1>
             <div >
                 <Link to='/'>
-                    <Button click={handleOnClick}>
+                    <Button>
                             Inicio
                     </Button>
                 </Link>
@@ -35,13 +31,13 @@ const Navbar = (props) => {
                     </Button>
                 </Link>
 
-                <Link>
+                {/* <Link>
                     <Button click={handleOnClick2}>
                         Contactanos
                     </Button>
-                </Link>
+                </Link> */}
 
-                <Link>
+                <Link to='/Login'>
                     <Button >
                         Ingresar
                     </Button>

@@ -6,22 +6,27 @@ import {collection, getDocs, query, where, documentId, writeBatch, addDoc} from 
 import { db } from "../../services/firebase/firebaseConfig"
 import { useNavigate } from 'react-router-dom'
 
+
 const Checkout =() => {
 
     const { cart, getTotal, clearCart } = useContext(CartContext)
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
+    const [userName, setUserName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [userTel, setUserTel] = useState("");
+    
+
     const handleCreateOrder = async () => {
+        const buyer = []
         setLoading(true)
 
         try{
             const objOrder = {
-                buyer: {
-                    name: 'Carlos e',
-                    email: 'carlos@navigator.io',
-                    phone: '1111111'
-                },
+                buyer : [userName, userEmail, userTel],
+                //buyer: (`Name: ${userName}, Email: ${userEmail}, tel: ${userTel}`),
+                Buyer: buyer,
                 item: cart,
                 total: getTotal()
             }
@@ -81,10 +86,57 @@ const Checkout =() => {
         )
     }
 
+//Logica del form inicio
+    const onName = (e) =>{
+        setUserName(e.target.value)
+    }
+    const onEmail = (e) =>{
+        setUserEmail(e.target.value)
+    }
+    const onTel = (e) =>{
+        setUserTel(e.target.value)
+    }
+    const sendData = (e) =>{
+        e.preventDefault();
+        console.log(`Name: ${userName}, Email: ${userEmail}, tel: ${userTel}`)
+    }
+//Logica del form fin
+
+
     return(
         <div>
-            <h2>CHECKOUT</h2>
-            <Button click={handleCreateOrder}>Confirmar</Button>
+            <h2>VERIFIQUE SU COMPRA</h2>
+
+{/* Formulario inicio*/}
+            <div className='form_container'>
+                <div className='form_top'>
+                    <h2>Confirma tu <span>Compra</span></h2>
+                </div>
+                <form className='form_info' onSubmit={handleCreateOrder} action=''>
+                    <input className='input'
+                        type='text'
+                        placeholder='&#128100; Nombre' required autoFocus
+                        value={ userName }
+                        onChange= {onName}
+                        />
+                    <input className='input' 
+                        type='email' 
+                        placeholder='&#128231; Email' required 
+                        value={ userEmail }
+                        onChange= {onEmail}
+                        />
+                    <input className='input' 
+                        type='tel' 
+                        placeholder='&#128241; Telefono' required
+                        value={ userTel }
+                        onChange= {onTel}
+                    />
+                    <div className='form_btn'>
+                        <Button type="submit">Confirmar</Button>
+                    </div>
+                </form>
+            </div>
+{/* Formulario fin*/}
         </div>
     )
 

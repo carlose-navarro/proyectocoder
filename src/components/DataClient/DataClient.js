@@ -3,7 +3,7 @@ import Button from "../Button/Button"
 import { useState } from 'react'
 
 
-const DataClient = (props) => {
+const DataClient = () => {
 
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
