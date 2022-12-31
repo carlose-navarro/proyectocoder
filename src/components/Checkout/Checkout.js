@@ -47,7 +47,7 @@ const Checkout =() => {
                 const prodAddCart = cart.find(prod => prod.id === doc.id)
                 const prodQuantity = prodAddCart?.quantity //?: operador de Optional chaining
 
-                console.log('Stock en base: ', stockDb , 'Cantidad en carrito: ',prodQuantity)
+                //console.log('Stock en base: ', stockDb , 'Cantidad en carrito: ',prodQuantity)
 
                 if(stockDb >= prodQuantity){
                     batch.update(doc.ref, {stock: stockDb - prodQuantity})
@@ -68,7 +68,7 @@ const Checkout =() => {
                     navigate('/')
                 }, 2000)
 
-                console.log(orderAdd.id)
+                //console.log(orderAdd.id)
             }else{
                 alert('Hay productos fuera de stock')
                 console.error('Hay productos fuera de stock')
@@ -96,10 +96,10 @@ const Checkout =() => {
     const onTel = (e) =>{
         setUserTel(e.target.value)
     }
-    const sendData = (e) =>{
+    /* const sendData = (e) =>{
         e.preventDefault();
         console.log(`Name: ${userName}, Email: ${userEmail}, tel: ${userTel}`)
-    }
+    } */
 //Logica del form fin
 
 

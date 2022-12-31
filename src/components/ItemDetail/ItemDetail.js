@@ -5,13 +5,11 @@ import Button from "../Button/Button";
 import { Link } from 'react-router-dom' 
 
 const ItemDetail = ({id, title, description, price, pictureUrl, stock}) =>{
-    /* const [quantity, setQuantity] = useState(0) */
 
     const {addItem, isInCart} = useContext(CartContext)
 
     const handleOnAdd = (quantity) => {
         addItem({id, title, price, quantity, pictureUrl})
-        /* setQuantity(quantity) */
     }
 
     return(
@@ -19,9 +17,9 @@ const ItemDetail = ({id, title, description, price, pictureUrl, stock}) =>{
         <h1>{title}</h1>
         <img src={pictureUrl} alt={title} style={{width: '200px'}}/>
         <p>{description}</p>
+        <h2>Cantidad disponible: {stock}</h2>
         <h2>$ {price}</h2>
         {   isInCart(id)
-            /* quantity > 0 */
             ?   <div>
                     <Link to='/'>
                         <Button>Seguir comprando</Button>
